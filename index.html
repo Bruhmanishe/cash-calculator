@@ -7,100 +7,120 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" href="./index.css" />
-    <title>Cash_Calc</title>
+    <title>CashCalc</title>
   </head>
   <body>
     <div class="cash-calculator">
-      <h1 class="cash-calculator__title"><span>Calc Your Cash</span></h1>
+      <h1 class="cash-calculator__title"><span>Count Your Cash</span></h1>
       <div class="cash-calculator__container">
         <main class="data">
           <section class="banknotes">
             <h3 class="banknotes__title">Banknotes</h3>
-            <div class="1000 cash-calculator__input">
-              <input
-                type="text"
-                name="1000-input"
-                value="0"
-                class="money-input"
-              />
-              <label for="1000-input">1000</label>
-            </div>
-            <div class="500 cash-calculator__input">
-              <input
-                type="text"
-                name="500-input"
-                value="0"
-                class="money-input"
-              />
-              <label for="500-input">500</label>
-            </div>
-            <div class="200 cash-calculator__input">
-              <input
-                type="text"
-                name="200-input"
-                value="0"
-                class="money-input"
-              />
-              <label for="200-input">200</label>
-            </div>
-            <div class="100 cash-calculator__input">
-              <input
-                type="text"
-                name="100-input"
-                value="0"
-                class="money-input"
-              />
-              <label for="100-input">100</label>
-            </div>
-            <div class="50 cash-calculator__input">
-              <input
-                type="text"
-                name="50-input"
-                value="0"
-                class="money-input"
-              />
-              <label for="50-input">50</label>
-            </div>
-            <div class="20 cash-calculator__input">
-              <input
-                type="text"
-                name="20-input"
-                value="0"
-                class="money-input"
-              />
-              <label for="20-input">20</label>
-            </div>
-            <div class="10 cash-calculator__input">
-              <input
-                type="text"
-                name="10-input"
-                value="0"
-                class="money-input"
-              />
-              <label for="10-input">10</label>
-            </div>
-            <div class="5 cash-calculator__input">
-              <input type="text" name="5-input" value="0" class="money-input" />
-              <label for="5-input">5</label>
-            </div>
-            <div class="2 cash-calculator__input">
-              <input type="text" name="2-input" value="0" class="money-input" />
-              <label for="2-input">2</label>
-            </div>
-            <div class="1 cash-calculator__input">
-              <input type="text" name="1-input" value="0" class="money-input" />
-              <label for="1-input">1</label>
+            <div class="inputs__container" banknotes>
+              <div class="500 cash-calculator__input">
+                <input
+                  type="text"
+                  name="500-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="500-input">500</label>
+              </div>
+              <div class="200 cash-calculator__input">
+                <input
+                  type="text"
+                  name="200-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="200-input">200</label>
+              </div>
+              <div class="100 cash-calculator__input">
+                <input
+                  type="text"
+                  name="100-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="100-input">100</label>
+              </div>
+              <div class="50 cash-calculator__input">
+                <input
+                  type="text"
+                  name="50-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="50-input">50</label>
+              </div>
+              <div class="20 cash-calculator__input">
+                <input
+                  type="text"
+                  name="20-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="20-input">20</label>
+              </div>
+              <div class="10 cash-calculator__input">
+                <input
+                  type="text"
+                  name="10-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="10-input">10</label>
+              </div>
+              <div class="5 cash-calculator__input">
+                <input
+                  type="text"
+                  name="5-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="5-input">5</label>
+              </div>
+              <div class="2 cash-calculator__input">
+                <input
+                  type="text"
+                  name="2-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="2-input">2</label>
+              </div>
+              <div class="1 cash-calculator__input">
+                <input
+                  type="text"
+                  name="1-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="1-input">1</label>
+              </div>
             </div>
           </section>
           <section class="coins">
             <h3 class="coins__title">Coins</h3>
-            <div class="50c cash-calculator__input">
-              <input type="text" name="1-input" value="0" class="money-input" />
-              <label for="50c-input" coins>50</label>
-            </div>
-            <div class="10c cash-calculator__input">
-              <input type="text" name="1-input" value="0" class="money-input" />
-              <label for="10c-input" coins>10</label>
+            <div class="inputs__container" coins>
+              <div class="50c cash-calculator__input">
+                <input
+                  type="text"
+                  name="50c-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="50c-input" coins>50</label>
+              </div>
+              <div class="10c cash-calculator__input">
+                <input
+                  type="text"
+                  name="10c-input"
+                  value="0"
+                  class="money-input"
+                />
+                <label for="10c-input" coins>10</label>
+              </div>
             </div>
           </section>
         </main>
@@ -113,7 +133,13 @@
             <button id="refreshBtn">
               <img
                 src="https://cdn-icons-png.freepik.com/256/930/930899.png?semt=ais_hybrid"
-                alt=""
+                alt="edit-button"
+              />
+            </button>
+            <button id="editBtn">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5996/5996831.png"
+                alt="edit-icon"
               />
             </button>
           </section>

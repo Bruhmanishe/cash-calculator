@@ -6,7 +6,8 @@
 body,
 html {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  display: flex;
 }
 
 .cash-calculator {
@@ -25,6 +26,7 @@ html {
 .cash-calculator__title {
   color: #eee;
   position: relative;
+  transform: translate(-10%);
 }
 
 .cash-calculator__title::after {
@@ -41,7 +43,7 @@ html {
 }
 
 .cash-calculator__container {
-  width: 300px;
+  min-width: 300px;
   background-color: #5a0a4f;
   display: flex;
   align-items: center;
@@ -51,12 +53,19 @@ html {
   gap: 10px;
 }
 
+.cash-calculator__input {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
 .data {
   display: flex;
   gap: 10px;
 }
 
 label {
+  /* display: block; */
   color: #eee;
   font-size: 18px;
 }
@@ -68,10 +77,17 @@ label {
   gap: 3px;
 }
 
+.inputs__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
 section h3 {
   color: #eee;
   font-weight: 500;
   position: relative;
+  align-self: flex-start;
 }
 
 .banknotes__title:after {
@@ -82,9 +98,9 @@ section h3 {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 80%;
+  right: -20%;
   bottom: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(50%, 50%);
 }
 
 .coins__title:after {
@@ -95,9 +111,9 @@ section h3 {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 80%;
+  right: -40%;
   bottom: 50%;
-  transform: translate(-50%, 40%);
+  transform: translate(50%, 40%);
 }
 
 .result {
@@ -140,6 +156,29 @@ button img {
 
 button:hover {
   cursor: pointer;
+}
+
+.add-input__btn {
+  background-color: #33032d;
+  padding: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  left: 5%;
+}
+
+.add-input__btn span {
+  display: block;
+  position: relative;
+  font-size: 25px;
+  color: #eee;
+  font-weight: 600;
+}
+
+.add-input__container {
+  display: flex;
+  align-items: center;
 }
 
 input {

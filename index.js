@@ -33,7 +33,8 @@ function calcAmount(input) {
 function calcFinalResult() {
   result.innerText = [...inputs]
     .map((el) => {
-      return parseFloat(el.getAttribute("result"));
+      if (parseFloat(el.getAttribute("result")) >= 0)
+        return parseFloat(el.getAttribute("result"));
     })
     .reduce((a, cv) => a + cv);
 }
@@ -207,7 +208,11 @@ editBtn.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
         e.stopPropagation();
-        if (parseInt(input.value) > 0 && input.value.length < 5) {
+        if (
+          parseInt(input.value) > 0 &&
+          input.value.length < 5 &&
+          input.value[0] !== "0"
+        ) {
           addNewInput(
             input.value,
             cont.hasAttribute("coins") ? "coins" : "banknotes"
@@ -238,7 +243,7 @@ editBtn.addEventListener("click", (e) => {
 });
 
 function applyCalcToInputs() {
-  inputs.forEach((input) => {
+  inputs.forEach((input, index) => {
     input.setAttribute("autocomplete", "off");
     !localStorage.getItem("savedData")
       ? localStorage.setItem("savedData", JSON.stringify({}))
@@ -258,7 +263,8 @@ function applyCalcToInputs() {
       for (let i = 0; allowedSymbols.length > i; i++) {
         if (input.value.length < 1) return calcAmount(input);
         if (input.value.length > 1 && input.value[0] == 0)
-          input.value = input.value.slice(0, 0);
+          input.value =
+            input.value.slice(0, 0) + input.value[input.value.length - 1];
         if (input.value[input.value.length - 1] === allowedSymbols[i])
           return calcAmount(input);
         if (i === allowedSymbols.length - 1)

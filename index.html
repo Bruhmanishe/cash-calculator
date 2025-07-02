@@ -154,7 +154,27 @@
           </section>
         </footer>
       </div>
+      <div id="donateBtn">Wanna support me?</div>
+      <div id="donate-button-container" class="hide-donate-btn">
+        <div id="donate-button"></div>
+        <script
+          src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
+          charset="UTF-8"
+        ></script>
+        <script>
+          PayPal.Donation.Button({
+            env: "production",
+            hosted_button_id: "SUEC4KP2M43AJ",
+            image: {
+              src: "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif",
+              alt: "Donate with PayPal button",
+              title: "PayPal - The safer, easier way to pay online!",
+            },
+          }).render("#donate-button");
+        </script>
+      </div>
     </div>
     <script src="./index.js"></script>
+    <script src="./donate.js"></script>
   </body>
 </html>

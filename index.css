@@ -193,3 +193,78 @@ input {
 input:focus {
   outline: none;
 }
+
+#donateBtn {
+  color: #eee;
+  cursor: pointer;
+}
+
+#donateBtn:focus {
+  color: #ffffff;
+}
+
+.hide-donate-btn,
+.show-donate-btn {
+  position: relative;
+}
+
+.hide-donate-btn::after,
+.show-donate-btn::after {
+  content: "";
+  display: block;
+  width: 102%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  z-index: 10;
+}
+
+.show-donate-btn::after {
+  top: 0%;
+  left: 100%;
+  transition: left 0.2s linear;
+}
+
+.hide-donate-btn::after {
+  top: 0%;
+  left: 0%;
+  transition: left 0.2s linear;
+}
+
+.hide-donate-btn {
+  animation: hide-donate-btn 0.4s linear forwards;
+}
+
+.show-donate-btn {
+  animation: show-donate-btn 0.4s linear forwards;
+}
+
+@keyframes hide-donate-btn {
+  0% {
+    /* display: block; */
+    transform: translate(0%, 0);
+  }
+  50% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    /* display: none; */
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes show-donate-btn {
+  0% {
+    /* display: block; */
+    transform: translate(100%, 0);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    /* display: none; */
+    transform: translate(0, 0);
+  }
+}

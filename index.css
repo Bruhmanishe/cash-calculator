@@ -24,6 +24,11 @@ html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+.ad-container {
+  width: 100%;
+  height: 100px;
+}
+
 .cash-calculator__title {
   color: #eee;
   position: relative;

@@ -94,8 +94,10 @@ section h3 {
 .banknotes__title:after {
   content: "";
   display: block;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/5220/5220037.png);
+  background-image: url(./img/banknotes.png);
+  background-position: 50% 50%;
   background-size: contain;
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -107,8 +109,10 @@ section h3 {
 .coins__title:after {
   content: "";
   display: block;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/10693/10693138.png);
+  background-image: url(./img/coins.png);
+  background-position: 50% 50%;
   background-size: contain;
+  background-repeat: no-repeat;
   width: 30px;
   height: 30px;
   position: absolute;

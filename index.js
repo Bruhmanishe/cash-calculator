@@ -159,8 +159,7 @@ editBtn.addEventListener("click", (e) => {
   loadStoredInputsInLocalStorage();
   if (!isEditingInputs) {
     isEditingInputs = true;
-    editBtn.querySelector("img").src =
-      "https://www.iconpacks.net/icons/2/free-check-mark-icon-3280-thumb.png";
+    editBtn.querySelector("img").src = "./img/accept-cahnges-button.png";
     inputs.forEach((input) => {
       addDelBtnToInput(input);
       // input.setAttribute("autocomplete", "off");
@@ -227,8 +226,7 @@ editBtn.addEventListener("click", (e) => {
     });
   } else {
     isEditingInputs = false;
-    editBtn.querySelector("img").src =
-      "https://cdn-icons-png.flaticon.com/512/5996/5996831.png";
+    editBtn.querySelector("img").src = "./img/change-inputs-button.png";
     applyCalcToInputs();
     console.log(isEditingInputs);
     inputs = document.querySelectorAll(".money-input");
